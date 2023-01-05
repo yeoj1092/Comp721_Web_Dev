@@ -1,0 +1,43 @@
+CREATE TABLE `cars` (
+  `car_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+  `make` varchar(18) NOT NULL,
+  `model` varchar(18) NOT NULL,
+  `price` int(11) NOT NULL,
+  `yom` int(11) NOT NULL
+) ;
+
+INSERT INTO `cars` (`car_id`, `make`, `model`, `price`, `yom`) VALUES
+(null, 'Holden', 'Astra', 14000, 2005),
+(null, 'BMW', 'X3', 35000, 2004),
+(null, 'Ford', 'Falcon', 39000, 2010),
+(null, 'Toyota', 'Corolla', 20000, 2010),
+(null, 'Holden', 'Commodore', 13500, 2005),
+(null, 'Holden', 'Astra', 8000, 2001),
+(null, 'Holden', 'Commodore', 28000, 2009),
+(null, 'Ford', 'Falcon', 14000, 2006),
+(null, 'Ford', 'Falcon', 7000, 2003),
+(null, 'Ford', 'Laser', 10000, 2001),
+(null, 'Mazda', 'RX-7', 26000, 2000),
+(null, 'Toyota', 'Corolla', 12000, 2001),
+(null, 'Mazda', '3', 14500, 2007);
+
+SELECT * FROM cars;
+
+SELECT make, model, price FROM cars ORDER BY make, model;
+
+SELECT make, model FROM cars WHERE price >= 20000;
+
+SELECT make, model FROM cars WHERE price < 15000;
+
+SELECT AVG( price ) FROM cars GROUP BY model;
+
+
+NOTE: NEED TO CHANGE NAMES AND EMAILS
+
+INSERT INTO `lab7` (`username`, `password`, `email`) VALUES
+('_______', '___', '_______@autuni.ac.nz'),
+('bob', 'ross', 'bobross@gmail.com'),
+('brian', 'lee', 'brianlee@gmail.com'),
+('steven', 'adams', 'stevenadams@gmail.com'),
+('jackie', 'chan', 'jackie_chan@gmail.com'),
+('connor', 'wang', 'connorwang@gmail.com'),
