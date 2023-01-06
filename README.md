@@ -14,6 +14,12 @@ This repository contains lab work completed over a 10-week period for a web deve
 https://github.com/github/linguist/issues/4229
 - The projects contained in this repository were finished at a particular time, so they might not be entirely compatible with more recent iterations of the employed technologies. Before using the code in a production environment, some testing might be necessary.
 ## Usage
-- Set up a development environment with PHP and myPHPAdmin installed
-- Import the database schemas provided into myPHPAdmin
-- Run the PHP files on a server to use and test the project functionality
+- Set up a development environment with PHP and myPHPAdmin
+or
+- set up a development enviroment with PHP, xampp and myPHPAdmin
+- Import the database schemas provided into myPHPAdmin/xampp
+- Run the PHP files on server to use and test the projects functionality
+or
+- run the PHP files on university provided servers to use and test the projects functionality
+
+
