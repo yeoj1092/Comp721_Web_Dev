@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lab08 Task E - Email Database</title>
+    </head>
+
+    <body>
+        <h1>Web Development - Week 08</h1>
+        <h2>Tasks E: Email Database</h2>
+        
+        <script>
+            //person function 
+            function Person(name, email) {
+                this.name = name;
+                this.email = email;
+                this.print = function() {
+                    //write to screen 
+                    document.write(" Name: " + this.name + " | Email: " + this.email + "<br>");
+                };
+            }
+            //database
+            function Database() {
+                this.records = [];
+                this.add = function(record) { // string
+                    this.records.push(record);
+                }
+                
+                //loops print to screen
+                this.print = function() {
+                    for (var i = 0; i < this.records.length; i++) {
+                        this.records[i].print();
+    
+                    }
+                }
+            }
+
+            //create database object
+            var database = new Database();
+            // entry data
+            var person = [
+                new Person("Steve", "Steve@gmail.com"),
+                new Person("Jacks", "Jacks@gmail.com"),
+                new Person("Bruce", "Bruce@gmail.com")
+            ];
+
+            // adds person data to database
+            database.add(person[0]);
+            database.add(person[1]);
+            database.add(person[2]);
+
+            //prints data from database
+            database.print();
+
+        </script>
+    </body>
+</html>
