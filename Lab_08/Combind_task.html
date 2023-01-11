@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tasks</title>
+</head>
+<body>
+  <!-- Task 2: Running total of numbers from 1 to 10 -->
+  <h1>Task A: Running total of numbers from 1 to 10</h1>
+  <script>
+    // initialize the total to 0
+    var total = 0;
+
+    // use a for loop to calculate the running total
+    for (var i = 1; i <= 10; i++) {
+      total += i;
+      document.write(i + ": " + total + "<br>");
+    }
+  </script>
+
+  <!-- Task 3: Change background color -->
+  <h1>Task B: Change background color</h1>
+  <button onclick="changeColor('red')">Red</button>
+  <button onclick="changeColor('green')">Green</button>
+  <script>
+    function changeColor(color) {
+      document.bgColor = color;
+    }
+  </script>
+
+  <!-- Task 4: Print words in string -->
+  <h1>Task D: Print words in string</h1>
+  <button onclick="printWords()">Print Words</button>
+  <br><br>
+  <div id="output"></div>
+  <script>
+    function printWords() {
+      // get the string from the user
+      var string = prompt("Enter a string:", "");
+  
+      // split the string into an array of words
+      var words = string.split(" ");
+  
+      // create a new array to store the formatted words
+      var formattedWords = [];
+  
+      // format each word and add it to the new array
+      for (var i = 0; i < words.length; i++) {
+        formattedWords.push(words[i] + "<br>");
+      }
+  
+      // get the output element
+      var output = document.getElementById("output");
+  
+      // set the innerHTML of the output element to the formatted words
+      output.innerHTML = formattedWords.join("");
+    }
+  </script>
+<!-- Task 5: Email database -->
+<h1>Task E: Email Database</h1>
+<div id="email"></div>
+<script>
+  function Record(name, email) {
+    this.name = name;
+    this.email = email;
+  }
+
+  Record.prototype.display = function() {
+    // create a new div element to display the record
+    var recordDiv = document.createElement("div");
+
+    // set the innerHTML of the div to the formatted record
+    recordDiv.innerHTML = this.name + " | " + this.email;
+
+    // return the div element
+    return recordDiv;
+  }
+
+  function Database() {
+    this.records = [];
+  }
+
+  Database.prototype.addRecord = function(record) {
+    this.records.push(record);
+  }
+
+  function displayDatabase() {
+    var database = new Database();
+
+    var record1 = new Record("Alice", "alice@example.com");
+    var record2 = new Record("Bob", "bob@example.com");
+    var record3 = new Record("Eve", "eve@example.com");
+
+    database.addRecord(record1);
+    database.addRecord(record2);
+    database.addRecord(record3);
+
+    // get the output element
+    var output = document.getElementById("email");
+
+    // loop through the records and add each one to the output element
+    for (var i = 0; i < database.records.length; i++) {
+      output.appendChild(database.records[i].display());
+    }
+  }
+
+  // call the displayDatabase function to display the records on the page
+  displayDatabase();
+</script>
+</body>
+</html>
