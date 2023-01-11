@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab08 Task D - Print Words</title>
+</head>
+<body>
+    <h1>Web Development - Week 08</h1>
+    <h2>Tasks D: Print Words</h2>
+    <button type="button" onclick="myFunction()">text button</button>
+    <p id="text"></p>
+    <script>
+        //function for button
+        function myFunction(){
+            //prompt for user to enter a text
+            var text = prompt("Please enter a text");
+            if (text != null && text != ""){
+                //break user input into array
+                break_text = text.split(" ");
+                //loops through all the array
+                break_text.forEach((item) => document.getElementById('text').innerHTML += item + '<br>')
+            } else{
+                // if input is empty
+                document.getElementById("text").innerHTML = "Cannot be Empty"+'<br>';
+            }
+        }
+    </script>
+</body>
+</html>
