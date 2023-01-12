@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab08 Task D - Print Words</title>
+  </head>
+  <body>
+    <h1>Web Development - Week 08</h1>
+    <h2>Tasks D: Print Words</h2>
+    <button onclick="printWords()">Print Words</button>
+    <script>
+      function printWords() {
+        // prompt the user to enter a string
+        var input = prompt("Enter a string:", "");
+
+        // split the string into an array of words
+        var words = input.split(" ");
+
+        // print the words one to a line
+        for (var i = 0; i < words.length; i++) {
+          document.write(words[i] + "<br>");
+        }
+      }
+    </script>
+  </body>
+</html>
