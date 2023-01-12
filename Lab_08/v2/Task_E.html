@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Database</title>
+</head>
+<body>
+    <h1>Web Development - Week 08</h1>
+    <h2>Tasks E: Email Database</h2>
+<div id="output"></div>
+<script>
+  function Record(name, email) {
+    this.name = name;
+    this.email = email;
+  }
+
+  Record.prototype.print = function() {
+    document.getElementById("output").innerHTML += this.name + " | " + this.email + "<br>";
+  }
+
+  function Database() {
+    this.records = [];
+  }
+
+  Database.prototype.addRecord = function(record) {
+    this.records.push(record);
+  }
+
+  Database.prototype.print = function() {
+    for (var i = 0; i < this.records.length; i++) {
+      this.records[i].print();
+    }
+  }
+
+  var database = new Database();
+
+  var record1 = new Record("Alice", "alice@gmail.com");
+  var record2 = new Record("Bob", "bob@gmail.com");
+  var record3 = new Record("Eve", "eve@gmail.com");
+
+  database.addRecord(record1);
+  database.addRecord(record2);
+  database.addRecord(record3);
+
+  database.print();
+</script>
+</body>
+</html>
